@@ -10,7 +10,7 @@ export module VORLON {
 
         public static ensureAuthenticated(req, res, next) {
             if (!Authentication.ActivateAuth || req.isAuthenticated()) { return next(); }
-            res.redirect('/login');
+            res.redirect(req.app.get('baseURL') + '/login');
         }
 
         public static loadAuthConfig(): void {

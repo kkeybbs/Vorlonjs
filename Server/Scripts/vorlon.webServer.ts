@@ -81,6 +81,7 @@ export module VORLON {
             //Sets
             app.set('host', this.httpConfig.host);
             app.set('port', this.httpConfig.port);
+            app.set('baseURL', this.baseURLConfig.baseURL);
             app.set('views', path.join(__dirname, '../views'));
             app.set('view engine', 'jade');
             
